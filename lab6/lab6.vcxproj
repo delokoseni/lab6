@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="checkfileextension.cpp" />
+    <ClCompile Include="Employee.cpp" />
     <ClCompile Include="Experience.cpp" />
     <ClCompile Include="Hours.cpp" />
     <ClCompile Include="Jobtitle.cpp" />
@@ -150,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="checkfileextension.h" />
+    <ClInclude Include="Employee.h" />
     <ClInclude Include="Experience.h" />
     <ClInclude Include="Hours.h" />
     <ClInclude Include="Jobtitle.h" />
