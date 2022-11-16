@@ -11,5 +11,8 @@ public:
 	Managemployee();
 	void output() override;
 	void input() override;
+	Managemployee operator + (Managemployee e1);
+	Managemployee& operator++(); //префиксный
+	Managemployee operator++(int); //постфиксный
 };
 

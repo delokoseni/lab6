@@ -41,3 +41,29 @@ void Subemployee::input(){
 	cout << "¬ведите ID ”правл€ющего: ";
 	cin >> managerid;
 }
+
+//перегрузка оператора +
+Subemployee Subemployee::operator + (Subemployee e1) {
+	//Employee* e, *th;
+	/*exp = exp + e1.exp;
+	hour = hour + e1.hour;
+	jt = jt + e1.jt;*/
+	managerid = e1.managerid;
+	return *this;
+}
+
+//перегрузка оператора ++ префиксный
+Subemployee& Subemployee::operator++() {
+	//this->exp++;
+	//this->hour++;
+	//this->jt++;
+	this->managerid++;
+	return *this;
+}
+
+//перегрузка оператора ++ постфиксный
+Subemployee Subemployee::operator++(int) {
+	Subemployee temp = *this;
+	++* this;
+	return temp;
+}

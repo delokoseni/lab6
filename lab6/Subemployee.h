@@ -18,11 +18,9 @@ public:
 	//void minuscounter();
 	//void minuscounter(int number);
 	//void editjtitle(string jtitle, string add);
-	//Employee* get();
-	//Employee& getadress();
-	//Employee operator + (Employee e1);
-	//Employee& operator++(); //префиксный
-	//Employee operator++(int); //постфиксный
+	Subemployee operator + (Subemployee e1);
+	Subemployee& operator++(); //префиксный
+	Subemployee operator++(int); //постфиксный
 	//void tofile(ofstream& file, string filename);
 	//void getfromfile(ifstream& file, string filename);
 };

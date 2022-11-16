@@ -25,12 +25,12 @@ public:
 	void minuscounter();
 	void minuscounter(int number);
 	void editjtitle(string jtitle, string add);
-	/**
 	Employee* get();
 	Employee& getadress();
-	Employee operator + (Employee e1);
+	Employee* operator + (Employee& e1);
 	Employee& operator++(); //префиксный
-	Employee operator++(int); //постфиксный
+	Employee* operator++(int); //постфиксный
+	/**
 	virtual void tofile(ofstream& file, string filename);
 	virtual void getfromfile(ifstream& file, string filename);**/
 private:

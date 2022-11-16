@@ -85,3 +85,36 @@ void Employee::minuscounter(int number) {
 void Employee::editjtitle(string jtitle, string add) {
 	jt.editjtitle(jtitle, add);
 }
+
+//метод, возвращающий значение через указатель
+Employee* Employee::get() {
+	return this;
+}
+
+//метод, возвращающий значение через ссылку
+Employee& Employee::getadress() {
+	return *this;
+}
+
+//перегрузка оператора +
+Employee* Employee::operator + (Employee& e1) {
+	exp = exp + e1.exp;
+	hour = hour + e1.hour;
+	jt = jt + e1.jt;
+	return this;
+}
+
+//перегрузка оператора ++ префиксный
+Employee& Employee::operator++() {
+	this->exp++;
+	this->hour++;
+	this->jt++;
+	return *this;
+}
+
+//перегрузка оператора ++ постфиксный
+Employee* Employee::operator++(int) {
+	Employee* temp = this;
+	++* this;
+	return temp;
+}
