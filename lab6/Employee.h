@@ -17,10 +17,8 @@ public:
 	virtual void binding(ofstream& file, string filename) = 0;
 	virtual void output();
 	virtual void input();
-	/**
 	virtual int getsalary(Salary sal);
 	virtual string getpremium(int houramount);
-	**/
 	void printcounter();
 	void minuscounter();
 	void minuscounter(int number);
@@ -32,6 +30,7 @@ public:
 	Employee* operator++(int); //постфиксный
 	virtual void tofile(ofstream& file, string filename);
 	virtual void getfromfile(ifstream& file, string filename);
+	Experience getexp();
 private:
 	static int counter;
 	int id; //индивидуальный номер

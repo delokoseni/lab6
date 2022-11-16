@@ -14,5 +14,6 @@ public:
 	Managemployee operator + (Managemployee e1);
 	Managemployee& operator++(); //префиксный
 	Managemployee operator++(int); //постфиксный
+	int getsalary(Salary sal) override;
 };
 

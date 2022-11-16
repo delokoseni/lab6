@@ -143,3 +143,24 @@ void Employee::getfromfile(ifstream& file, string filename) {
 		throw exception("В файле недостаточно данных для записи или неверно указано имя файла.\n");
 	}
 }
+
+//метод подсчета зарплаты
+int Employee::getsalary(Salary sal) {
+	int salary = 0;
+	salary += hour.hoursmoney(jt, sal);
+	salary = sal.allmoney(salary, exp);
+	return salary;
+}
+
+//метод подсчета премии (положена или нет)
+string Employee::getpremium(int houramount) {
+	if (hour.allhours() < houramount)
+		return "Премия не положена";
+	else
+		return "Премия положена";
+}
+
+//метод возвращающий поле exp
+Experience Employee::getexp() {
+	return this->exp;
+}

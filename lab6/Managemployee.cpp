@@ -60,3 +60,10 @@ Managemployee Managemployee::operator++(int) {
 	++* this;
 	return temp;
 }
+
+//метод подсчета зарплаты
+int Managemployee::getsalary(Salary sal) {
+	int salary = this->Employee::getsalary(sal);
+	salary += sal.allmoney(salary, subordinates);
+	return salary;
+}

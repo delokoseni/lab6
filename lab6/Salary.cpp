@@ -128,11 +128,16 @@ int Salary::overtimeweekends(int overtime, int weekends) {
 }
 
 //Вспомогательный метод при вычислении зарплаты
-int Salary::allmoney(int salary, Experience exp, Jobtitle jt, Subordinates subs) {
-    if (expstatus)
-        salary += (float)salary / 100 * exppercent * exp.allexp();
+int Salary::allmoney(int salary, Subordinates subs) {
     if (subsstatus)
         salary += (float)salary / 100 * subspercent * subs.getamount();
+    return salary;
+}
+
+//Вспомогательный метод при вычислении зарплаты
+int Salary::allmoney(int salary, Experience exp) {
+    if (expstatus)
+        salary += (float)salary / 100 * exppercent * exp.allexp();
     return salary;
 }
 
