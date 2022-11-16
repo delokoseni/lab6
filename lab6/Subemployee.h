@@ -21,7 +21,7 @@ public:
 	Subemployee operator + (Subemployee e1);
 	Subemployee& operator++(); //префиксный
 	Subemployee operator++(int); //постфиксный
-	//void tofile(ofstream& file, string filename);
-	//void getfromfile(ifstream& file, string filename);
+	void tofile(ofstream& file, string filename) override;
+	void getfromfile(ifstream& file, string filename) override;
 };
 

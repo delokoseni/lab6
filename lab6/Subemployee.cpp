@@ -67,3 +67,20 @@ Subemployee Subemployee::operator++(int) {
 	++* this;
 	return temp;
 }
+
+//метод записи в файл
+void Subemployee::tofile(ofstream& file, string filename) {
+	this->Employee::tofile(file, filename);
+	file << managerid << "\n";
+}
+
+//метод записи из файла
+void Subemployee::getfromfile(ifstream& file, string filename) {
+	try {
+		this->Employee::getfromfile(file, filename);
+		file >> managerid;
+	}
+	catch (exception& e) {
+		throw exception("В файле недостаточно данных для записи.\n");
+	}
+}

@@ -30,9 +30,8 @@ public:
 	Employee* operator + (Employee& e1);
 	Employee& operator++(); //префиксный
 	Employee* operator++(int); //постфиксный
-	/**
 	virtual void tofile(ofstream& file, string filename);
-	virtual void getfromfile(ifstream& file, string filename);**/
+	virtual void getfromfile(ifstream& file, string filename);
 private:
 	static int counter;
 	int id; //индивидуальный номер
