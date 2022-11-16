@@ -80,3 +80,8 @@ void Employee::minuscounter(int number) {
 	counter = counter - number;
 	cout << "Количество сотрудников уменьшено c " << x << " до " << counter << endl;
 }
+
+//метод обращения к методу внутреннего класса
+void Employee::editjtitle(string jtitle, string add) {
+	jt.editjtitle(jtitle, add);
+}

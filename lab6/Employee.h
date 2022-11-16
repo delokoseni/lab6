@@ -24,8 +24,8 @@ public:
 	void printcounter();
 	void minuscounter();
 	void minuscounter(int number);
+	void editjtitle(string jtitle, string add);
 	/**
-	virtual void editjtitle(string jtitle, string add);
 	Employee* get();
 	Employee& getadress();
 	Employee operator + (Employee e1);

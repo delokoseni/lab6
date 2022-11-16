@@ -1,6 +1,26 @@
 #include "Managemployee.h"
 
+//конструкторы класса
 
+Managemployee::Managemployee() : Subemployee() {
+	Subordinates subs;
+	subordinates = subs;
+}
+
+Managemployee::Managemployee(int allfields) : Subemployee(allfields) {
+	if (allfields >= 0) {
+		Subordinates subs(allfields);
+		subordinates = subs;
+	}
+	else {
+		Subordinates subs;
+		subordinates = subs;
+	}
+}
+
+Managemployee::Managemployee(Experience exp, Hours h, Jobtitle j, int managerid, Subordinates subordinates) : Subemployee(exp, h, j, managerid) {
+	this->subordinates = subordinates;
+}
 
 //метод вывода Managemployee
 void Managemployee::output() {
