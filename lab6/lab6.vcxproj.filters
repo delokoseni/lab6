@@ -42,6 +42,12 @@
     <ClCompile Include="Employee.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Subemployee.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Managemployee.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Subordinates.h">
@@ -63,6 +69,12 @@
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="Employee.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Subemployee.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Managemployee.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

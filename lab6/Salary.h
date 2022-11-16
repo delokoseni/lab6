@@ -1,6 +1,7 @@
 #pragma once
 #include "Experience.h"
 #include "Jobtitle.h"
+#include "Subordinates.h"
 
 class Salary
 {
@@ -13,7 +14,7 @@ public:
     void input();
     void output();
     int overtimeweekends(int overtime, int weekends);
-    int allmoney(int salary, Experience experience, Jobtitle jobtitle);
+    int allmoney(int salary, Experience experience, Jobtitle jobtitle, Subordinates subs);
     Salary operator + (Salary salary);
     Salary& operator++(); //префиксный
     Salary operator++(int); //постфиксный
