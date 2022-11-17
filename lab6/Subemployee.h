@@ -14,6 +14,6 @@ public:
 	virtual void input() override;
 	void tofile(ofstream& file, string filename) override;
 	void getfromfile(ifstream& file, string filename) override;
-	Subemployee& operator= (Subemployee sub);
+	Subemployee operator= (Subemployee sub);
 };
 

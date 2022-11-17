@@ -40,3 +40,9 @@ int Managemployee::getsalary(Salary sal) {
 	salary += sal.allmoney(salary, subordinates);
 	return salary;
 }
+
+//перегрузка оператора присваивания
+Managemployee Managemployee::operator=(Subemployee sub) {
+	Subemployee::operator=(sub);
+	return *this;
+}

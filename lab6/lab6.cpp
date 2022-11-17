@@ -7,9 +7,9 @@ int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    Subemployee subemployee, subemployee1(1), subemployee2(20);
+    Subemployee subemployee, subemployee1(1);
     Managemployee managemployee(50);
-    Employee* employee, *emp;
+    Employee* employee;
     Salary sal(3, 3, 3, 3, true, true);
     employee = &subemployee;
     employee->output();;
@@ -19,10 +19,8 @@ int main()
     cout << "Зарплата managemployee: " << managemployee.getsalary(sal) << endl;
     cout << "Зарплата managemployee: " << managemployee.Employee::getsalary(sal) << endl;
     cout << endl;
-    subemployee2 = subemployee;
-    subemployee2.output();
-    cout << endl;
-
+    managemployee = subemployee1;
+    managemployee.output();
     string fname = "text.txt";
     ofstream file;
     file.exceptions(ofstream::badbit | ofstream::failbit);

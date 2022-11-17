@@ -3,6 +3,7 @@
 
 class Managemployee : public Subemployee
 {
+	using Subemployee::operator =;
 private: 
 	Subordinates subordinates;
 public:
@@ -12,5 +13,6 @@ public:
 	void output() override;
 	void input() override;
 	int getsalary(Salary sal) override;
+	Managemployee operator=(Subemployee sub);
 };
 

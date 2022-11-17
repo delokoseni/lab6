@@ -61,7 +61,7 @@ void Subemployee::getfromfile(ifstream& file, string filename) {
 }
 
 //перегрузка оператора присваивания
-Subemployee& Subemployee::operator= (Subemployee sub){
+Subemployee Subemployee::operator= (Subemployee sub) {
 	this->id = sub.id;
 	this->exp = sub.exp;
 	this->hour = sub.hour;
