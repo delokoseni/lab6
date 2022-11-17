@@ -18,20 +18,17 @@ public:
 	virtual void output();
 	virtual void input();
 	virtual int getsalary(Salary sal);
-	virtual string getpremium(int houramount);
+	string getpremium(int houramount);
 	void printcounter();
 	void minuscounter();
 	void minuscounter(int number);
 	void editjtitle(string jtitle, string add);
 	Employee* get();
 	Employee& getadress();
-	Employee* operator + (Employee& e1);
-	Employee& operator++(); //префиксный
-	Employee* operator++(int); //постфиксный
 	virtual void tofile(ofstream& file, string filename);
 	virtual void getfromfile(ifstream& file, string filename);
 	Experience getexp();
-private:
+protected:
 	static int counter;
 	int id; //индивидуальный номер
 	Experience exp; //стаж

@@ -7,7 +7,7 @@ int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    Subemployee subemployee, subemployee1(1);
+    Subemployee subemployee, subemployee1(1), subemployee2(20);
     Managemployee managemployee(50);
     Employee* employee, *emp;
     Salary sal(3, 3, 3, 3, true, true);
@@ -18,6 +18,9 @@ int main()
     cout << endl;
     cout << "Зарплата managemployee: " << managemployee.getsalary(sal) << endl;
     cout << "Зарплата managemployee: " << managemployee.Employee::getsalary(sal) << endl;
+    cout << endl;
+    subemployee2 = subemployee;
+    subemployee2.output();
     cout << endl;
 
     string fname = "text.txt";

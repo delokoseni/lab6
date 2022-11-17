@@ -12,10 +12,8 @@ public:
 	void binding(ofstream& file, string filename) override;
 	virtual void output() override;
 	virtual void input() override;
-	Subemployee operator + (Subemployee e1);
-	Subemployee& operator++(); //префиксный
-	Subemployee operator++(int); //постфиксный
 	void tofile(ofstream& file, string filename) override;
 	void getfromfile(ifstream& file, string filename) override;
+	Subemployee& operator= (Subemployee sub);
 };
 

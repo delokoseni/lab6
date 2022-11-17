@@ -42,31 +42,6 @@ void Subemployee::input(){
 	cin >> managerid;
 }
 
-//перегрузка оператора +
-Subemployee Subemployee::operator + (Subemployee e1) {
-	//Employee* e, *th;
-	/*exp = exp + e1.exp;
-	hour = hour + e1.hour;
-	jt = jt + e1.jt;*/
-	managerid = e1.managerid;
-	return *this;
-}
-
-//перегрузка оператора ++ префиксный
-Subemployee& Subemployee::operator++() {
-	//this->exp++;
-	//this->hour++;
-	//this->jt++;
-	this->managerid++;
-	return *this;
-}
-
-//перегрузка оператора ++ постфиксный
-Subemployee Subemployee::operator++(int) {
-	Subemployee temp = *this;
-	++* this;
-	return temp;
-}
 
 //метод записи в файл
 void Subemployee::tofile(ofstream& file, string filename) {
@@ -83,4 +58,14 @@ void Subemployee::getfromfile(ifstream& file, string filename) {
 	catch (exception& e) {
 		throw exception("¬ файле недостаточно данных дл€ записи.\n");
 	}
+}
+
+//перегрузка оператора присваивани€
+Subemployee& Subemployee::operator= (Subemployee sub){
+	this->id = sub.id;
+	this->exp = sub.exp;
+	this->hour = sub.hour;
+	this->jt = sub.jt;
+	this->managerid = sub.managerid;
+	return *this;
 }
