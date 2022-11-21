@@ -77,5 +77,6 @@ ostream& operator<< (ostream& out, Subemployee& subemployee) {
 	cout << subemployee.exp << endl;
 	cout << subemployee.hour << endl;
 	cout << subemployee.jt << endl;
+	out << "managerid: " << subemployee.managerid;
 	return out;
 }
