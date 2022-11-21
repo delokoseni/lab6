@@ -9,6 +9,7 @@ class Jobtitle;
 class Hours
 {
 	friend int normhcost(Hours hours, Jobtitle jobtitle);
+	friend ostream& operator<< (ostream& os, Hours& subemployee);
 public:
 	Hours(int n, int o, int w);
 	Hours(int allfields);

@@ -73,7 +73,9 @@ void Subemployee::binding(ofstream& file, string filenamesubs, string filenamema
 //перегрузка оператора <<
 ostream& operator<< (ostream& out, Subemployee& subemployee) {
 	out << "Counter: " << subemployee.counter << " ";
-	out << "ID: " << subemployee.id << " ";
-	cout << subemployee.exp;
+	out << "ID: " << subemployee.id << endl;
+	cout << subemployee.exp << endl;
+	cout << subemployee.hour << endl;
+
 	return out;
 }

@@ -139,3 +139,10 @@ void Hours::getfromfile(ifstream& file, string filename) {
 		throw exception("В файле недостаточно данных для записи  или неверно указано имя файла.\n");
 	}
 }
+
+ostream& operator<< (ostream& os, Hours& hours) {
+	os << "normal: " << hours.normal << " ";
+	os << "overtime: " << hours.overtime << " ";
+	os << "weekends: " << hours.weekends << " ";
+	return os;
+}
