@@ -24,11 +24,6 @@ Subemployee::Subemployee(int allfields) : Employee(allfields){
 	}
 }
 
-//переопределение метода binding 
-void Subemployee::binding(ofstream& file, string filename) {
-
-}
-
 //метод вывода Subemployee
 void Subemployee::output() {
 	this->Employee::output();
@@ -68,4 +63,17 @@ Subemployee Subemployee::operator= (Subemployee sub) {
 	this->jt = sub.jt;
 	this->managerid = sub.managerid;
 	return *this;
+}
+
+//перегрузка чисто виртуальной функции
+void Subemployee::binding(ofstream& file, string filenamesubs, string filenamemanag, int managerid) {
+
+}
+
+//перегрузка оператора <<
+ostream& operator<< (ostream& out, Subemployee& subemployee) {
+	out << "Counter: " << subemployee.counter << " ";
+	out << "ID: " << subemployee.id << " ";
+
+	return out;
 }

@@ -9,12 +9,11 @@
 using namespace std;
 
 class Employee {
-	friend class Subemployee;
 public:
 	Employee();
 	Employee(int allfields);
 	Employee(Experience e, Hours h, Jobtitle j);
-	virtual void binding(ofstream& file, string filename) = 0;
+	virtual void binding(ofstream& file, string filenamesubs, string filenamemanag, int managerid) = 0;
 	virtual void output();
 	virtual void input();
 	virtual int getsalary(Salary sal);

@@ -7,7 +7,7 @@ int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    Subemployee subemployee, subemployee1(1);
+    Subemployee subemployee(50), subemployee1(1);
     Managemployee managemployee(50);
     Employee* employee;
     Salary sal(3, 3, 3, 3, true, true);
@@ -16,8 +16,14 @@ int main()
     cout << endl;
     employee->printcounter();
     cout << endl;
-    cout << "Зарплата managemployee: " << managemployee.getsalary(sal) << endl;
-    cout << "Зарплата managemployee: " << managemployee.Employee::getsalary(sal) << endl;
+    Employee* emp;
+    emp = &subemployee;
+    cout << "Зарплата subemployee: " << emp->getsalary(sal) << endl;
+    emp = &managemployee;
+    cout << endl;
+    cout << subemployee;
+    cout << endl << endl;
+    cout << "Зарплата managemployee: " << emp->getsalary(sal) << endl;
     cout << endl;
     managemployee = subemployee1;
     managemployee.output();
@@ -48,6 +54,5 @@ int main()
     {
         cout << ex1.what();
     }
-
     return 0;
 }
