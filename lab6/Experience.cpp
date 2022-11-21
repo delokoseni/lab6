@@ -126,3 +126,10 @@ void Experience::getfromfile(ifstream& file, string filename) {
 		throw exception("В файле недостаточно данных для записи  или неверно указано имя файла.\n");
 	}
 }
+
+ostream& operator<< (ostream& os, Experience& experience) {
+	os << "workingyears: " << experience.workingyears << " ";
+	os << "army: " << experience.army << " ";
+	os << "maternityleave: " << experience.maternityleave << " ";
+	return os;
+}

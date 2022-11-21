@@ -4,6 +4,7 @@ using namespace std;
 
 class Experience
 {
+	friend ostream& operator<< (ostream& os, Experience& experience);
 public:
 	Experience(int w, int a, int m);
 	Experience(int x);
