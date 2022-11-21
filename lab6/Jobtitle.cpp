@@ -143,3 +143,9 @@ void Jobtitle::getfromfile(ifstream& file, string filename) {
 	}
 
 }
+
+ostream& operator<< (ostream& os, Jobtitle& jobtitle) {
+	os << "jtitle: " << jobtitle.jtitle << " ";
+	os << "hourlycost: " << jobtitle.hourlycost << " ";
+	return os;
+}

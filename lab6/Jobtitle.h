@@ -8,6 +8,7 @@ class Hours;
 class Jobtitle
 {
 	friend int normhcost(Hours hours, Jobtitle jobtititle);
+	friend ostream& operator<< (ostream& os, Jobtitle& jobtitle);
 public:
 	Jobtitle(string jtitle, int hourlycost);
 	Jobtitle(int allfields);
