@@ -1,6 +1,5 @@
 ﻿#include <iostream>
 #include <Windows.h>
-#include "Employee.h"
 #include "Managemployee.h"
 
 int main()
@@ -8,7 +7,19 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     Subemployee subemployee(50), subemployee1(1);
-    Managemployee managemployee(50);
+
+    Experience exp;
+    Hours h; 
+    Jobtitle j; 
+    int managerid = 19; 
+    Subordinates subordinates;
+    string arr[4];
+    for (int i = 0; i < 4; i++) {
+        arr[i] = "Подчиненный";
+    }
+    Managemployee<string, 4> managemployee(exp, h, j, managerid, subordinates, arr);
+
+
     Employee* employee;
     Salary sal(3, 3, 3, 3, true, true);
     employee = &subemployee;
