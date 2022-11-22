@@ -13,12 +13,9 @@ int main()
     Jobtitle j; 
     int managerid = 19; 
     Subordinates subordinates;
-    string arr[4];
-    for (int i = 0; i < 4; i++) {
-        arr[i] = "Подчиненный";
-    }
-    Managemployee<string, 4> managemployee(exp, h, j, managerid, subordinates, arr);
-
+    Subemployee arr[4];
+    Managemployee<Subemployee, 4> managemployee(exp, h, j, managerid, subordinates, arr);
+    managemployee.output();
 
     Employee* employee;
     Salary sal(3, 3, 3, 3, true, true);
