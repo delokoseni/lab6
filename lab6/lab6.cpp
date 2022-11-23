@@ -14,6 +14,7 @@ int main()
     int managerid = 19; 
     Subordinates subordinates;
     Subemployee arr[4];
+    cin >> arr[0];
     Managemployee<Subemployee, 4> managemployee(exp, h, j, managerid, subordinates, arr);
     managemployee.output();
 

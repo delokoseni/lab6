@@ -40,18 +40,17 @@ public:
 		subordinates.output();
 		cout << "Массив подчиненных:\n";
 		for (int j = 0; j < i; j++) {
-			//cout << arr[j] << endl;
-			arr[j].output();
+			cout << arr[j] << endl;
 		}
 	}
-	/*void input() override {
+	void input() override {
 		this->Subemployee::input();
 		subordinates.input();
 		for (int j = 0; j < i; j++) {
 			cout << "Введите подчиненного: ";
 			cin >> arr[j];
 		}
-	}*/
+	}
 	int getsalary(Salary sal) override {
 		int salary = this->Employee::getsalary(sal);
 		salary += sal.allmoney(salary, subordinates);

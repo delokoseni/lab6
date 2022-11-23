@@ -53,6 +53,8 @@ void Jobtitle::input() {
 	getline(cin, jtitle);
 	cout << "¬ведите стоимость часа работы: ";
 	cin >> hourlycost;
+	Jobtitle j(jtitle, hourlycost);
+	this->set(j);
 }
 
 //метод вывода

@@ -4,6 +4,7 @@
 class Subemployee : public Employee
 {
 	friend ostream& operator<< (ostream& os, Subemployee& subemployee);
+	friend istream& operator>> (istream& os, Subemployee& subemployee);
 private:
 	int managerid;
 public:

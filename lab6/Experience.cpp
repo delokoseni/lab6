@@ -50,7 +50,9 @@ Experience::Experience() {
 
 //метод установки значений
 void Experience::set(Experience e) {
-
+	this->workingyears = e.workingyears;
+	this->army = e.army;
+	this->maternityleave = e.maternityleave;
 }
 
 //метод ввода класса experience

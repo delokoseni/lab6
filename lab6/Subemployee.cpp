@@ -80,3 +80,11 @@ ostream& operator<< (ostream& out, Subemployee& subemployee) {
 	out << "managerid: " << subemployee.managerid;
 	return out;
 }
+
+//перегрузка оператора >>
+istream& operator>> (istream& os, Subemployee& subemployee) {
+	subemployee.Employee::input();
+	cout << "¬ведите ID ”правл€ющего: ";
+	os >> subemployee.managerid;
+	return os;
+}
