@@ -60,5 +60,14 @@ public:
 		Subemployee::operator=(sub);
 		return *this;
 	}
+	//перегрузка оператора <<
+	ostream& operator<< (ostream& out) {
+		Subemployee s = *this;
+		cout << s;
+		out << "Массив подчиненных:\n";
+		for (int j = 0; j < i; j++) {
+			out << this->arr[j] << endl;
+		}
+		return out;
+	}
 };
-
