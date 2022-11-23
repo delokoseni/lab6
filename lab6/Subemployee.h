@@ -11,7 +11,6 @@ public:
 	Subemployee();
 	Subemployee(int allfields);
 	Subemployee(Experience exp, Hours h, Jobtitle j, int managerid);
-	void binding(ofstream& file, string filenamesubs, string filenamemanag, int managerid) override;
 	virtual void output() override;
 	virtual void input() override;
 	void tofile(ofstream& file, string filename) override;

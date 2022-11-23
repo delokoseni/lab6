@@ -96,16 +96,6 @@ Employee& Employee::getadress() {
 	return *this;
 }
 
-//метод записи в файл
-void Employee::tofile(ofstream& file, string filename) {
-	if (!checkfileextension(filename))
-		throw exception("Использовано недопустимое расширение файла. Допустимое расширение: \".txt\".\n");
-	file << id << "\t";
-	exp.tofile(file, filename);
-	hour.tofile(file, filename);
-	jt.tofile(file, filename);
-}
-
 //метод записи из файла
 void Employee::getfromfile(ifstream& file, string filename) {
 	if (!checkfileextension(filename))

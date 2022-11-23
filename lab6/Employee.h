@@ -13,7 +13,6 @@ public:
 	Employee();
 	Employee(int allfields);
 	Employee(Experience e, Hours h, Jobtitle j);
-	virtual void binding(ofstream& file, string filenamesubs, string filenamemanag, int managerid) = 0;
 	virtual void output();
 	virtual void input();
 	virtual int getsalary(Salary sal);
@@ -24,7 +23,7 @@ public:
 	void editjtitle(string jtitle, string add);
 	Employee* get();
 	Employee& getadress();
-	virtual void tofile(ofstream& file, string filename);
+	virtual void tofile(ofstream& file, string filename) = 0;
 	virtual void getfromfile(ifstream& file, string filename);
 	Experience getexp();
 protected:
