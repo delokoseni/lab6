@@ -40,7 +40,12 @@ void Subemployee::input(){
 
 //метод записи в файл
 void Subemployee::tofile(ofstream& file, string filename) {
-	this->Employee::tofile(file, filename);
+	if (!checkfileextension(filename))
+		throw exception("Использовано недопустимое расширение файла. Допустимое расширение: \".txt\".\n");
+	file << id << "\t";
+	exp.tofile(file, filename);
+	hour.tofile(file, filename);
+	jt.tofile(file, filename);
 	file << managerid << "\n";
 }
 
@@ -65,18 +70,13 @@ Subemployee Subemployee::operator= (Subemployee sub) {
 	return *this;
 }
 
-//перегрузка чисто виртуальной функции
-void Subemployee::binding(ofstream& file, string filenamesubs, string filenamemanag, int managerid) {
-
-}
-
 //перегрузка оператора <<
 ostream& operator<< (ostream& out, Subemployee& subemployee) {
 	out << "Counter: " << subemployee.counter << " ";
 	out << "ID: " << subemployee.id << endl;
-	cout << subemployee.exp << endl;
-	cout << subemployee.hour << endl;
-	cout << subemployee.jt << endl;
+	out << subemployee.exp << endl;
+	out << subemployee.hour << endl;
+	out << subemployee.jt << endl;
 	out << "managerid: " << subemployee.managerid;
 	return out;
 }

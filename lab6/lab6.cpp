@@ -7,9 +7,9 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     Subemployee subemployee(50), subemployee1(1);
-    Experience exp;
-    Hours h; 
-    Jobtitle j; 
+    Experience exp(50);
+    Hours h(50);
+    Jobtitle j(50);
     int managerid = 19; 
     Subordinates subordinates;
     Subemployee arr[4];
@@ -32,6 +32,7 @@ int main()
     cout << subemployee;
     cout << endl << endl;
     cout << "Зарплата managemployee: " << emp->getsalary(sal) << endl;
+    cout << "Зарплата managemployee: " << emp->Employee::getsalary(sal) << endl;
     cout << endl;
     managemployee = subemployee1;
     managemployee.output();

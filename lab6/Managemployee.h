@@ -63,7 +63,7 @@ public:
 	//перегрузка оператора <<
 	ostream& operator<< (ostream& out) {
 		Subemployee s = *this;
-		cout << s;
+		out << s;
 		out << "Массив подчиненных:\n";
 		for (int j = 0; j < i; j++) {
 			out << this->arr[j] << endl;
